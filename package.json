@@ -1,0 +1,31 @@
+{
+  "name": "keywordify",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@picocss/pico": "1.5.9",
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.34",
+    "@types/react-dom": "18.0.11",
+    "chart.js": "4.2.1",
+    "dotenv": "16.0.3",
+    "eslint": "8.38.0",
+    "eslint-config-next": "13.3.0",
+    "google-ads-api": "13.0.0",
+    "next": "13.3.0",
+    "react": "18.2.0",
+    "react-chartjs-2": "5.2.0",
+    "react-dom": "18.2.0",
+    "swr": "2.1.3",
+    "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "5.58.0"
+  }
+}
