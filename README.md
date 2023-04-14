@@ -1,38 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Keywordify
 
-## Getting Started
+Simplify your SEO strategy with Keywordify - the app that extracts the best keywords for your content.
 
-First, run the development server:
+![Screenshot of Keywordify](/path/to/screenshot.png)
+
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies](#technologies)
+- [License](#license)
+
+## Features
+
+- Extract the best keywords for your content
+- Get suggestions based on user input
+- Authenticate users with the Pro tier
+- Access to the Google Ads API
+- Visualize data with Chart.js
+
+## Installation
+
+To install Keywordify, clone this repository and install dependencies:
+
+```bash
+git clone https://github.com/username/keywordify.git
+cd keywordify
+npm install
+```
+
+Then create a .env.local file and provide the necessary credentials (found in .env).
+
+## Usage
+To start the app in development mode, run:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
+This will start the Next.js development server and the API server.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Technologies
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Keywordify was built with the following technologies:
+* ![next-url][next.js]
+* ![typescript-url][typescript]
+* ![swr-url][swr]
+* ![google-ads-api-url][google-ads-api]
+* ![chart.js-url][chart.js]
+* ![react-chartjs-2-url][react-chartjs-2]
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs
+[next-url]: https://nextjs.org/
+[swr]: https://img.shields.io/badge/swr-000000?style=for-the-badge&logo=swc
+[swr-url]: https://swr.vercel.app/
+[picocss]: https://img.shields.io/badge/picocss-000000?style=for-the-badge&logo=picocss
+[picocss-url]: https://picocss.com/
+[typescript]: https://img.shields.io/badge/typescript-000000?style=for-the-badge&logo=typescript
+[typescript-url]: https://www.typescriptlang.org/
+[google-ads-api]: https://img.shields.io/badge/google_ads_api-000000?style=for-the-badge&logo=googleads
+[google-ads-api-url]: https://developers.google.com/google-ads/api/docs/start
+[chart.js]: https://img.shields.io/badge/chart.js-000000?style=for-the-badge&logo=chartdotjs
+[chart.js-url]: https://www.chartjs.org/
+[react-chartjs-2]: https://img.shields.io/badge/react_chart.js_2-000000?style=for-the-badge&logo=react
+[react-chartjs-2-url]: https://react-chartjs-2.js.org/
