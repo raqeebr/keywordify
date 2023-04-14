@@ -2,7 +2,7 @@
 
 Simplify your SEO strategy with Keywordify - the app that extracts the best keywords for your content.
 
-![Screenshot of Keywordify](/path/to/screenshot.png)
+![Screenshot of Keywordify](/public/demo.gif)
 
 ## Table of Contents
 
@@ -14,11 +14,8 @@ Simplify your SEO strategy with Keywordify - the app that extracts the best keyw
 
 ## Features
 
-- Extract the best keywords for your content
 - Get suggestions based on user input
-- Authenticate users with the Pro tier
-- Access to the Google Ads API
-- Visualize data with Chart.js
+- Visualize keyword stats with Chart.js
 
 ## Installation
 
