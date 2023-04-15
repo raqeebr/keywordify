@@ -3,37 +3,42 @@ name: dev_release
 on:
   push:
     branches: [main]
-    
+
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   build_and_deploy:
     name: build and deploy
     runs-on: ubuntu-latest
     environment: dev
-    
+
     steps:
-    - uses: actions/checkout@latest
-  
-    - uses: azure/login@latest
-      with:
-        client-id: ${{ secrets.AZURE_CLIENT_ID }}
-        tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-        subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-      
-    - name: deploy bicep
-      uses: azure/arm-deploy@latest
-      with:
-        subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
-        template: ./deploy/main.bicep
-        parameters: ./deploy/dev.parameters.json
-        
-    - name: build and deploy
-      id: swa
-      uses: azure/static-web-apps-deploy@latest
-      with:
-        azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_TOKEN }}
-        app_location: "/"
-        action: "upload"
-      env:
-        ENABLE_PREVIEW_FEATURES: true
-        FUNCTION_LANGUAGE: node
-        FUNCTION_LANGUAGE_VERSION: 16
+      - uses: actions/checkout@v3.5.2
+
+      - uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: build and deploy
+        id: swa
+        uses: azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_TOKEN }}
+          app_location: "/"
+          action: "upload"
+        env:
+          ENABLE_PREVIEW_FEATURES: true
+          FUNCTION_LANGUAGE: node
+          FUNCTION_LANGUAGE_VERSION: 16
+
+      - name: deploy bicep
+        uses: azure/arm-deploy@v1
+        with:
+          deploymentName: ${{ github.run_number }}
+          resourceGroupName: ${{ secrets.AZURE_RG }}
+          template: ./deploy/main.bicep
+          parameters: ./deploy/dev.parameters.json tenantId=${{ secrets.AZURE_TENANT_ID }} googleAdsClientId=${{ secrets.GOOGLEADS_CLIENT_ID }} googleAdsClientSecret=${{ secrets.GOOGLEADS_CLIENT_SECRET }} googleAdsDevToken=${{ secrets.GOOGLEADS_DEV_TOKEN }} googleAdsRefreshToken=${{ secrets.GOOGLEADS_REFRESH_TOKEN }} googleAdsCustomerId=${{ secrets.GOOGLEADS_CUSTOMER_ID }}

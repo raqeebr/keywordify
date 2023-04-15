@@ -1,0 +1,10 @@
+{
+    "resourceGroupName": "kwydev01",
+    "location": "southeastasia",
+    "keyVaultName": {
+      "type": "string"
+    },
+    "staticWebAppName": {
+      "type": "kwywebapp01"
+    }
+  }
