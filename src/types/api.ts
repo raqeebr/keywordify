@@ -15,3 +15,5 @@ export type KeywordIdea = {
     maxBid?: number | null,
     relatedConcepts?: Concept[] | null
 }
+
+export type ActionType = "search" | "extract";
