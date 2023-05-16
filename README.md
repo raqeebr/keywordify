@@ -9,6 +9,7 @@ Simplify your SEO strategy with Keywordify - the app that extracts the best keyw
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Configuration](#configuration)
 - [Technologies](#technologies)
 - [License](#license)
 
@@ -24,7 +25,7 @@ To install Keywordify, clone this repository and install dependencies:
 ```bash
 git clone https://github.com/username/keywordify.git
 cd keywordify
-npm install
+npm ci
 ```
 
 Then create a .env.local file and provide the necessary credentials (found in .env).
@@ -37,6 +38,34 @@ npm run dev
 ```
 This will start the Next.js development server and the API server.
 
+The app then can be accessed at https://localhost:3000
+
+## Configuration
+
+### Prerequisuites:
+1. Google Ads Account
+2. Azure Account with a valid Azure Subscription
+
+### Setting up your Google Ads Account
+
+Since the app relies on Google Ads api, you'll need to setup a Google Ads account and include the necessary configs in your `env.local` file
+
+To setup a Google Ads Test Account follow this <a href="https://developers.google.com/google-ads/api/docs/first-call/test-accounts" target="_blank">documentation</a>
+
+Once your Google Ads account is created, you will need to obtain a developer token. Follow this <a href="https://developers.google.com/google-ads/api/docs/first-call/dev-token" target="_blank">guide</a> to obtain one
+
+### Setting up Azure Services
+
+The app requires 2 Azure services, <a href="https://azure.microsoft.com/en-us/products/app-service/static" target="_blank">Azure Static Webapps</a> and <a href="https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/overview" target="_blank">Azure Cognitive Services for Language</a>
+
+To build & deploy the Next.js app into Azure Static Web Apps follow this <a href="https://learn.microsoft.com/en-us/azure/static-web-apps/deploy-nextjs-hybrid" target="_blank">guide</a>
+
+To setup Azure Cognitive Services for Language follow this <a href="https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/key-phrase-extraction/quickstart?pivots=programming-language-javascript" target="_blank">guide</a> 
+
+Once you've setup it up, update the `.env.local` file with the endpoint and api key
+
+
+<h3><i>That's it! You're all set! 🚀</i></h3>
 
 ## Technologies
 
